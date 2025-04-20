@@ -9,7 +9,7 @@ export const authOptions: NextAuthOptions = {
         email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" }
       },
-      async authorize(credentials) {
+      async authorize() {
         // TODO: Implement proper authentication
         return { id: "1", email: "test@example.com" };
       }

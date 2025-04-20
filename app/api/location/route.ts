@@ -12,11 +12,22 @@ export async function POST(request: Request) {
 
     const { latitude, longitude, timestamp } = await request.json();
 
-    // TODO: Store location data in database
-    // For now, we'll just return success
+    // Mock database storage operation
+    console.log('Storing location data:', {
+      latitude,
+      longitude,
+      timestamp,
+      userId: session.user.id
+    });
+
     return NextResponse.json({ 
       success: true,
-      message: 'Location updated successfully'
+      message: 'Location updated successfully',
+      data: {
+        latitude,
+        longitude,
+        timestamp
+      }
     });
   } catch (error) {
     console.error('Error updating location:', error);

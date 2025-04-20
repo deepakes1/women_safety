@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaFistRaised, FaMoon, FaSun, FaBars, FaBook, FaVideo, FaUserShield, FaRunning } from 'react-icons/fa';
+import { FaFistRaised, FaMoon, FaSun, FaBars, FaVideo, FaUserShield, FaRunning } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function SelfDefense() {

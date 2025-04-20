@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -345,11 +345,13 @@ export default function SafetyGames() {
                 </h2>
                 {scenarios[currentScenario].image && (
                   <div className="relative">
-                    <img 
+                    <Image 
                       src={scenarios[currentScenario].image} 
                       alt="Scenario illustration"
+                      width={500}
+                      height={250}
                       className="mx-auto mb-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
-                      style={{ maxHeight: '250px' }}
+                      style={{ maxHeight: '250px', width: 'auto' }}
                     />
                     {showConfetti && (
                       <motion.div

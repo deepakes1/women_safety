@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaBell, FaMapMarkedAlt, FaUsers, FaPhoneAlt, FaMoon, FaSun, FaShieldAlt, FaRoute, FaUserFriends, FaLightbulb, FaHandshake, FaComments, FaMapMarkerAlt, FaBars, FaRocket } from 'react-icons/fa';
+import { FaBell, FaUsers, FaMoon, FaSun, FaShieldAlt, FaRoute, FaUserFriends, FaLightbulb, FaHandshake, FaComments, FaMapMarkerAlt, FaBars, FaRocket } from 'react-icons/fa';
 import { useState } from 'react';
 import Link from 'next/link';
 

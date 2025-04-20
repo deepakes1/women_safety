@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import twilio from 'twilio';
+import { TwilioError } from 'twilio/lib/rest/TwilioError';
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
@@ -54,11 +55,11 @@ export async function POST(request: Request) {
       from: formattedFromNumber,
       to: formattedToNumber
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error sending WhatsApp message:', error);
     
     // Handle specific Twilio errors
-    if (error.code === 63007) {
+    if (error instanceof TwilioError && error.code === 63007) {
       return NextResponse.json(
         { 
           error: 'WhatsApp number not properly configured. Please check your Twilio settings.',
@@ -69,10 +70,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json(
-      { 
-        error: 'Failed to send message',
-        details: error.message
-      },
+      { error: 'Failed to send WhatsApp message' },
       { status: 500 }
     );
   }

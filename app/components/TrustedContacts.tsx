@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FaUserPlus, FaUserTimes, FaCheck, FaTimes } from 'react-icons/fa';
+import { FaUserPlus, FaUserTimes, FaCheck } from 'react-icons/fa';
 
 interface Contact {
   id: string;
@@ -152,7 +152,7 @@ export default function TrustedContacts() {
         ))}
         {contacts.length === 0 && (
           <p className="text-center text-gray-500 py-4">
-            No trusted contacts added yet. Click "Add Contact" to get started.
+            No trusted contacts added yet. Click &quot;Add Contact&quot; to get started.
           </p>
         )}
       </div>

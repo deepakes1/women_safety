@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaMapMarkerAlt, FaMoon, FaSun, FaBars, FaRoute, FaUserFriends, FaLock, FaClock } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaMoon, FaSun, FaBars, FaRoute, FaUserFriends, FaClock } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function LocationTracking() {

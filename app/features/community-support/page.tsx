@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaUsers, FaMoon, FaSun, FaBars, FaHandsHelping, FaComments, FaGraduationCap, FaShieldAlt } from 'react-icons/fa';
+import { FaUsers, FaMoon, FaSun, FaBars, FaHandsHelping, FaGraduationCap, FaShieldAlt } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function CommunitySupport() {

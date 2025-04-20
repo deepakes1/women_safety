@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaMapMarkerAlt, FaMoon, FaSun, FaBars, FaShareAlt, FaUserFriends, FaRoute, FaLock } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaMoon, FaSun, FaBars, FaUserFriends, FaRoute, FaLock } from 'react-icons/fa';
 import { useState } from 'react';
 import LocationTracker from '@/app/components/LocationTracker';
 import TrustedContacts from '@/app/components/TrustedContacts';

@@ -73,7 +73,7 @@ export default function WorkshopPage() {
             Safety Resources
           </h1>
           <p className="mt-3 text-xl text-gray-500">
-            Find videos and workshops for women's and children's safety
+            Find videos and workshops for women&apos;s and children&apos;s safety
           </p>
         </div>
 

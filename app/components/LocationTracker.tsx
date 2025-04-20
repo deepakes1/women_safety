@@ -310,18 +310,18 @@ export default function LocationTracker() {
                   {/Android/i.test(navigator.userAgent) ? (
                     <ol className="text-sm text-yellow-700 dark:text-yellow-300 list-decimal list-inside mt-2">
                       <li>Open Settings</li>
-                      <li>Tap "Location"</li>
-                      <li>Turn on "Use location"</li>
-                      <li>Select "High accuracy" mode</li>
+                      <li>Tap &quot;Location&quot;</li>
+                      <li>Turn on &quot;Use location&quot;</li>
+                      <li>Select &quot;High accuracy&quot; mode</li>
                       <li>Return to the app and try again</li>
                     </ol>
                   ) : /iPhone|iPad|iPod/i.test(navigator.userAgent) ? (
                     <ol className="text-sm text-yellow-700 dark:text-yellow-300 list-decimal list-inside mt-2">
                       <li>Open Settings</li>
-                      <li>Tap "Privacy"</li>
-                      <li>Tap "Location Services"</li>
-                      <li>Turn on "Location Services"</li>
-                      <li>Find your browser and select "While Using"</li>
+                      <li>Tap &quot;Privacy&quot;</li>
+                      <li>Tap &quot;Location Services&quot;</li>
+                      <li>Turn on &quot;Location Services&quot;</li>
+                      <li>Find your browser and select &quot;While Using&quot;</li>
                       <li>Return to the app and try again</li>
                     </ol>
                   ) : null}
@@ -390,13 +390,13 @@ export default function LocationTracker() {
               <p className="whitespace-pre-line">{error}</p>
               {isMobile && error.includes('GPS') && (
                 <div className="mt-2 p-2 bg-yellow-50 rounded">
-                  <p className="text-sm text-yellow-700">
+                  <p className="text-sm text-yellow-700 dark:text-yellow-300">
                     <FaMobileAlt className="inline mr-1" />
                     Mobile Device Tips:
                   </p>
                   <ul className="list-disc list-inside text-sm text-yellow-700 ml-4">
                     <li>Go to Settings → Location → Enable GPS</li>
-                    <li>Make sure you're outdoors or near a window</li>
+                    <li>Make sure you&apos;re outdoors or near a window</li>
                     <li>Check if location permission is granted to your browser</li>
                   </ul>
                 </div>
@@ -428,7 +428,7 @@ export default function LocationTracker() {
 
       {!location && !error && !isLoading && (
         <p className="text-gray-500">
-          Location tracking is inactive. Click "Start Tracking" to begin.
+          Location tracking is inactive. Click &quot;Start Tracking&quot; to begin.
         </p>
       )}
 

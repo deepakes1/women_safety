@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaDownload, FaFileAlt, FaFilePdf, FaFileVideo, FaMoon, FaSun, FaBars, FaChild, FaFemale, FaBookOpen, FaHeartbeat } from 'react-icons/fa';
+import { FaDownload, FaFileAlt, FaFilePdf, FaMoon, FaSun, FaBars, FaChild, FaFemale, FaBookOpen, FaHeartbeat } from 'react-icons/fa';
 
 export default function OfflineResources() {
   const [isDark, setIsDark] = useState(false);

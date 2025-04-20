@@ -255,7 +255,7 @@ export default function LocationSharing() {
         ))}
         {journeys.length === 0 && (
           <p className="text-center text-gray-500 py-4">
-            No active journeys. Click "Start New Journey" to begin sharing your location.
+            No active journeys. Click &quot;Start New Journey&quot; to begin sharing your location.
           </p>
         )}
       </div>

@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 interface Article {
   id: string;
@@ -80,7 +81,7 @@ export default function ArticleDetailPage() {
           </div>
           
           <div className="mt-8 pt-6 border-t border-gray-200">
-            <a
+            <Link
               href="/features/video-article"
               className="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
             >
@@ -88,7 +89,7 @@ export default function ArticleDetailPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
               Back to Articles
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ Remember, your safety is paramount. These tips are just a starting point - alway
     return NextResponse.json(article);
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch article' },
+      { error: 'Failed to fetch article', message: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }

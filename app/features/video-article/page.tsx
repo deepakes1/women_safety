@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { Search, Filter } from 'lucide-react';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 interface Article {
@@ -110,7 +109,7 @@ export default function VideoArticlePage() {
             Safety Resources
           </h1>
           <p className="mt-3 text-xl text-gray-500">
-            AI-Generated Articles on Women's Safety
+            AI-Generated Articles on Women&apos;s Safety
           </p>
         </div>
 

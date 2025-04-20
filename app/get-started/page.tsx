@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { 
   FaBell, 
   FaMapMarkerAlt, 
-  FaBook, 
-  FaRobot, 
   FaVideo, 
   FaPiggyBank, 
   FaRobot as FaAI,
@@ -15,8 +13,6 @@ import {
   FaHeart,
   FaMicrophone,
   FaGamepad,
-  FaTrophy,
-  FaGlobe,
   FaMobile,
   FaFileDownload,
   FaMoon,
