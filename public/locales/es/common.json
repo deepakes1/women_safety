@@ -1,0 +1,15 @@
+{
+  "welcome": "Bienvenida a la Aplicación de Seguridad para Mujeres",
+  "home": "Inicio",
+  "about": "Acerca de",
+  "contact": "Contacto",
+  "emergency": "Emergencia",
+  "safety_tips": "Consejos de Seguridad",
+  "report_incident": "Reportar Incidente",
+  "login": "Iniciar Sesión",
+  "signup": "Registrarse",
+  "profile": "Perfil",
+  "settings": "Configuración",
+  "logout": "Cerrar Sesión",
+  "language": "Idioma"
+} 
