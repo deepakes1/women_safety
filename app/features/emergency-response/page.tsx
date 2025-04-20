@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaPhone, FaMoon, FaSun, FaBars, FaAmbulance, FaPolice, FaHeartbeat, FaComments } from 'react-icons/fa';
+import { FaPhone, FaMoon, FaSun, FaBars, FaAmbulance, FaHeartbeat, FaComments } from 'react-icons/fa';
+import { FaShieldAlt } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function EmergencyResponse() {
@@ -23,7 +24,7 @@ export default function EmergencyResponse() {
     {
       title: 'Law Enforcement',
       description: 'Direct line to local police and security services.',
-      icon: <FaPolice className="text-3xl" />
+      icon: <FaShieldAlt className="text-3xl" />
     },
     {
       title: 'Emergency Chat',

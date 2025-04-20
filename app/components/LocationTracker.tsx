@@ -29,8 +29,8 @@ export default function LocationTracker() {
     checkMobile();
 
     // Automatically start tracking when component mounts
-    startTracking();
-  }, []); // Empty dependency array means this runs once on mount
+    requestLocationPermission();
+  }, []); // Empty dependency array is fine here since we're only running on mount
 
   const requestLocationPermission = () => {
     setShowPermissionPopup(false);
@@ -53,7 +53,6 @@ export default function LocationTracker() {
           (err) => {
             let errorMessage = 'Failed to track location';
             let showSettingsLink = false;
-            let deviceSpecificInstructions = '';
             
             switch (err.code) {
               case err.TIMEOUT:
@@ -66,19 +65,6 @@ export default function LocationTracker() {
                 break;
               case err.POSITION_UNAVAILABLE:
                 if (isMobile) {
-                  // Detect device type for specific instructions
-                  const isAndroid = /Android/i.test(navigator.userAgent);
-                  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-                  
-                  if (isAndroid) {
-                    deviceSpecificInstructions = 'For Android:\n1. Open Settings\n2. Tap "Location"\n3. Turn on "Use location"\n4. Select "High accuracy" mode\n5. Return to the app and try again';
-                  } else if (isIOS) {
-                    deviceSpecificInstructions = 'For iOS:\n1. Open Settings\n2. Tap "Privacy"\n3. Tap "Location Services"\n4. Turn on "Location Services"\n5. Find your browser and select "While Using"\n6. Return to the app and try again';
-                  }
-                  
-                  errorMessage = 'GPS is disabled in your device settings. Please enable it to continue.';
-                  showSettingsLink = true;
-                } else {
                   errorMessage = 'Location information unavailable. Please ensure location services are enabled in your browser settings.';
                 }
                 break;
@@ -106,7 +92,6 @@ export default function LocationTracker() {
       (err) => {
         let errorMessage = 'Failed to get location';
         let showSettingsLink = false;
-        let deviceSpecificInstructions = '';
         
         switch (err.code) {
           case err.TIMEOUT:
@@ -119,19 +104,6 @@ export default function LocationTracker() {
             break;
           case err.POSITION_UNAVAILABLE:
             if (isMobile) {
-              // Detect device type for specific instructions
-              const isAndroid = /Android/i.test(navigator.userAgent);
-              const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-              
-              if (isAndroid) {
-                deviceSpecificInstructions = 'For Android:\n1. Open Settings\n2. Tap "Location"\n3. Turn on "Use location"\n4. Select "High accuracy" mode\n5. Return to the app and try again';
-              } else if (isIOS) {
-                deviceSpecificInstructions = 'For iOS:\n1. Open Settings\n2. Tap "Privacy"\n3. Tap "Location Services"\n4. Turn on "Location Services"\n5. Find your browser and select "While Using"\n6. Return to the app and try again';
-              }
-              
-              errorMessage = 'GPS is disabled in your device settings. Please enable it to continue.';
-              showSettingsLink = true;
-            } else {
               errorMessage = 'Location information unavailable. Please ensure location services are enabled in your browser settings.';
             }
             break;
