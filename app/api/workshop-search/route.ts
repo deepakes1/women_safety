@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 // Curated list of safety-focused YouTube channels and playlists
 const SAFETY_RESOURCES = [
@@ -49,7 +49,7 @@ const SAFETY_RESOURCES = [
   }
 ];
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
     const { query } = await request.json();
     
