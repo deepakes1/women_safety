@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import twilio from 'twilio';
-import { TwilioError } from 'twilio/lib/rest/TwilioError';
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
