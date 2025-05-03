@@ -71,7 +71,7 @@ export default function Home() {
               className="text-center md:text-left"
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent dark:text-gray-800">
-                Empowering Women's Safety
+                Empowering Women&apos;s Safety
               </h1>
               <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300">
                 Your safety is our priority. Join our community for real-time location sharing, safety tips, and emergency assistance.

@@ -39,11 +39,11 @@ export default function VideoArticlePage() {
           messages: [
             {
               role: "system",
-              content: "You are a helpful assistant that generates articles about women's safety. Generate 5 different articles with titles, descriptions, and relevant information."
+              content: "You are a helpful assistant that generates articles about women&apos;s safety. Generate 5 different articles with titles, descriptions, and relevant information."
             },
             {
               role: "user",
-              content: "Please generate 5 articles about women's safety, including topics like self-defense, travel safety, workplace safety, digital safety, and emergency preparedness. Each article should have a title, detailed description, and practical tips."
+              content: "Please generate 5 articles about women&apos;s safety, including topics like self-defense, travel safety, workplace safety, digital safety, and emergency preparedness. Each article should have a title, detailed description, and practical tips."
             }
           ],
           temperature: 0.7,

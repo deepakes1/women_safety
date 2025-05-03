@@ -20,7 +20,7 @@ export default function OfflineResources() {
   const resources = [
     {
       id: 1,
-      title: "Women's Personal Safety Guide",
+      title: "Women&apos;s Personal Safety Guide",
       description: "Comprehensive guide covering safety tips, risk assessment, and prevention strategies for women.",
       fileType: "PDF",
       fileSize: "2.4MB",
@@ -50,7 +50,7 @@ export default function OfflineResources() {
     },
     {
       id: 4,
-      title: "Children's Internet Safety Guide",
+      title: "Children&apos;s Internet Safety Guide",
       description: "Tips for keeping children safe online and protecting them from digital threats.",
       fileType: "PDF",
       fileSize: "2.8MB",
@@ -60,7 +60,7 @@ export default function OfflineResources() {
     },
     {
       id: 5,
-      title: "Women's Health & Wellbeing",
+      title: "Women&apos;s Health & Wellbeing",
       description: "Comprehensive resource covering essential health information and wellness practices for women.",
       fileType: "PDF",
       fileSize: "4.2MB",
@@ -101,7 +101,7 @@ export default function OfflineResources() {
     {
       id: 9,
       title: "Mental Health Resources for Women",
-      description: "Compilation of resources focusing on women's mental health and stress management.",
+      description: "Compilation of resources focusing on women&apos;s mental health and stress management.",
       fileType: "Document",
       fileSize: "2.7MB",
       category: "health",
@@ -110,7 +110,7 @@ export default function OfflineResources() {
     },
     {
       id: 10,
-      title: "Children's Health & Nutrition Guide",
+      title: "Children&apos;s Health & Nutrition Guide",
       description: "Comprehensive guide on maintaining optimal health and nutrition for children of all ages.",
       fileType: "PDF",
       fileSize: "3.8MB",
