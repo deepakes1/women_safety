@@ -353,31 +353,6 @@ export default function LocationTracker() {
         </div>
       </div>
 
-      {error && (
-        <div className="p-3 mb-4 bg-red-100 text-red-700 rounded-lg">
-          <div className="flex items-start gap-2">
-            <FaExclamationTriangle className="mt-1 flex-shrink-0" />
-            <div>
-              <p className="font-semibold">Location Error</p>
-              <p className="whitespace-pre-line">{error}</p>
-              {isMobile && error.includes('GPS') && (
-                <div className="mt-2 p-2 bg-yellow-50 rounded">
-                  <p className="text-sm text-yellow-700 dark:text-yellow-300">
-                    <FaMobileAlt className="inline mr-1" />
-                    Mobile Device Tips:
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-yellow-700 ml-4">
-                    <li>Go to Settings → Location → Enable GPS</li>
-                    <li>Make sure you&apos;re outdoors or near a window</li>
-                    <li>Check if location permission is granted to your browser</li>
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-
       {location && (
         <div className="space-y-2">
           <div className="grid grid-cols-2 gap-4">

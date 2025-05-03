@@ -17,7 +17,6 @@ interface Scenario {
     isCorrect: boolean;
     feedback: string;
   }[];
-  image: string;
 }
 
 const scenarios: Scenario[] = [
@@ -40,8 +39,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "Never invite strangers to follow you! Let's try again!"
       }
-    ],
-    image: "/images/stranger-danger.png"
+    ]
   },
   {
     id: 2,
@@ -62,8 +60,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "It's good to be cautious, but we should tell an adult about suspicious situations."
       }
-    ],
-    image: "/images/lost-puppy.png"
+    ]
   },
   {
     id: 3,
@@ -84,8 +81,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "Even watching can be dangerous. Always stay away from fire. Let's try again!"
       }
-    ],
-    image: "/images/fire-safety.png"
+    ]
   },
   {
     id: 4,
@@ -106,8 +102,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "Even watching unsafe activities can encourage others. Always speak up about safety!"
       }
-    ],
-    image: "/images/pool-safety.png"
+    ]
   },
   {
     id: 5,
@@ -128,8 +123,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "Never use your phone while crossing the street! Always pay attention to traffic."
       }
-    ],
-    image: "/images/street-safety.png"
+    ]
   },
   {
     id: 6,
@@ -150,8 +144,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "It's better to stay quiet and not let strangers know you're home alone."
       }
-    ],
-    image: "/images/home-safety.png"
+    ]
   },
   {
     id: 7,
@@ -172,8 +165,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "It's important to get help from an adult for injuries. Let's try again!"
       }
-    ],
-    image: "/images/first-aid.png"
+    ]
   },
   {
     id: 8,
@@ -194,8 +186,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "Even watching can be dangerous. Always tell an adult about unsafe situations."
       }
-    ],
-    image: "/images/medicine-safety.png"
+    ]
   },
   {
     id: 9,
@@ -216,8 +207,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "Making sudden movements or loud noises can make a dog more dangerous."
       }
-    ],
-    image: "/images/dog-safety.png"
+    ]
   },
   {
     id: 10,
@@ -238,8 +228,7 @@ const scenarios: Scenario[] = [
         isCorrect: false,
         feedback: "Never hide under trees during storms - they can attract lightning!"
       }
-    ],
-    image: "/images/storm-safety.png"
+    ]
   }
 ];
 
@@ -343,27 +332,6 @@ export default function SafetyGames() {
                 <h2 className="text-3xl font-semibold text-purple-700 mb-6">
                   {scenarios[currentScenario].question}
                 </h2>
-                {scenarios[currentScenario].image && (
-                  <div className="relative">
-                    <Image 
-                      src={scenarios[currentScenario].image} 
-                      alt="Scenario illustration"
-                      width={500}
-                      height={250}
-                      className="mx-auto mb-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
-                      style={{ maxHeight: '250px', width: 'auto' }}
-                    />
-                    {showConfetti && (
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        className="absolute inset-0 flex items-center justify-center"
-                      >
-                        <Sparkles className="w-16 h-16 text-yellow-400 animate-pulse" />
-                      </motion.div>
-                    )}
-                  </div>
-                )}
               </div>
 
               <div className="space-y-4">
@@ -379,9 +347,9 @@ export default function SafetyGames() {
                       className={`w-full text-xl py-7 rounded-xl transition-all duration-200 text-black ${
                         selectedOption === index 
                           ? option.isCorrect 
-                            ? 'bg-green-100 hover:bg-green-200' 
-                            : 'bg-red-100 hover:bg-red-200'
-                          : 'hover:bg-purple-100'
+                            ? 'bg-green-50 hover:bg-green-100' 
+                            : 'bg-red-50 hover:bg-red-100'
+                          : 'bg-white hover:bg-purple-50'
                       }`}
                       onClick={() => handleOptionSelect(index)}
                       disabled={showFeedback}

@@ -54,11 +54,11 @@ export async function POST(request: NextRequest) {
       from: formattedFromNumber,
       to: formattedToNumber
     });
-  } catch (error: unknown) {
+  } catch (error: any) {
     console.error('Error sending WhatsApp message:', error);
     
     // Handle specific Twilio errors
-    if (error instanceof TwilioError && error.code === 63007) {
+    if (error.code === 63007) {
       return NextResponse.json(
         { 
           error: 'WhatsApp number not properly configured. Please check your Twilio settings.',

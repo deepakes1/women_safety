@@ -59,7 +59,8 @@ export default function GetStarted() {
       title: 'AI Virtual Assistant',
       description: 'A virtual assistant that speaks and interacts for instant help.',
       icon: <FaAI className="text-4xl text-white" />,
-      color: 'from-cyan-500 to-cyan-600'
+      color: 'from-cyan-500 to-cyan-600',
+      link: '/features/chatbot'
     },
     {
       title: 'Live Workshops',
@@ -107,7 +108,8 @@ export default function GetStarted() {
       title: 'Offline Resources',
       description: 'Important safety, legal, and mental health resources available offline.',
       icon: <FaFileDownload className="text-4xl text-white" />,
-      color: 'from-lime-500 to-lime-600'
+      color: 'from-lime-500 to-lime-600',
+      link: '/features/offline-resources'
     }
   ];
 

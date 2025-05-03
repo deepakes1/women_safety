@@ -26,7 +26,7 @@ export default function OfflineResources() {
       fileSize: "2.4MB",
       category: "women",
       icon: <FaFilePdf className="text-red-500" />,
-      downloadUrl: "/resources/womens-personal-safety-guide.pdf"
+      downloadUrl: "https://drive.google.com/file/d/16p2DMCoiKJ_qhIAA-lJ4SH0BCNUjS394/view"
     },
     {
       id: 2,
