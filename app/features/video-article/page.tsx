@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Search, Filter } from 'lucide-react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 interface Article {
   id: string;
@@ -22,7 +22,6 @@ export default function VideoArticlePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   const generateArticles = async (apiKey: string) => {
     try {
