@@ -9,15 +9,15 @@ const corsHeaders = {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
-): Promise<NextResponse> {
+  context: { params: { id: string } }
+) {
   // Handle preflight requests
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, { headers: corsHeaders });
   }
 
   try {
-    const { id } = params;
+    const { id } = context.params;
     
     // Input validation
     if (!id || typeof id !== 'string') {
