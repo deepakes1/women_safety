@@ -10,7 +10,7 @@ const corsHeaders = {
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
-): Promise<Response> {
+) {
   // Handle preflight requests
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, { headers: corsHeaders });
