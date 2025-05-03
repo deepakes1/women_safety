@@ -7,9 +7,15 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
 
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
 export async function GET(
   request: NextRequest,
-  context: { params: { id: string } }
+  props: Props
 ) {
   // Handle preflight requests
   if (request.method === 'OPTIONS') {
@@ -17,7 +23,7 @@ export async function GET(
   }
 
   try {
-    const { id } = context.params;
+    const { id } = props.params;
     
     // Input validation
     if (!id || typeof id !== 'string') {
