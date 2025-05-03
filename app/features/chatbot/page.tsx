@@ -56,7 +56,7 @@ export default function Chatbot() {
       
       const botResponse: Message = {
         id: messages.length + 2,
-        text: data.answer || "I'm sorry, I couldn't process your request. Please try again.",
+        text: data.answer || "I&apos;m sorry, I couldn&apos;t process your request. Please try again.",
         sender: 'bot',
         timestamp: new Date(),
       };
@@ -66,7 +66,7 @@ export default function Chatbot() {
       console.error('Error:', error);
       const errorResponse: Message = {
         id: messages.length + 2,
-        text: "I'm sorry, there was an error processing your request. Please try again later.",
+        text: "I&apos;m sorry, there was an error processing your request. Please try again later.",
         sender: 'bot',
         timestamp: new Date(),
       };

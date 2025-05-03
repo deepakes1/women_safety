@@ -20,33 +20,33 @@ interface Scenario {
 const scenarios: Scenario[] = [
   {
     id: 1,
-    question: "You're walking home from school and a stranger offers you candy. What should you do?",
+    question: "You&apos;re walking home from school and a stranger offers you candy. What should you do?",
     options: [
       {
         text: "Take the candy and say thank you",
         isCorrect: false,
-        feedback: "Remember, never take anything from strangers! Let's try again!"
+        feedback: "Remember, never take anything from strangers! Let&apos;s try again!"
       },
       {
         text: "Say 'No thank you' and walk away",
         isCorrect: true,
-        feedback: "Great job! It's important to say no to strangers and walk away."
+        feedback: "Great job! It&apos;s important to say no to strangers and walk away."
       },
       {
         text: "Ask them to follow you home",
         isCorrect: false,
-        feedback: "Never invite strangers to follow you! Let's try again!"
+        feedback: "Never invite strangers to follow you! Let&apos;s try again!"
       }
     ]
   },
   {
     id: 2,
-    question: "You're playing in the park and someone you don't know asks you to help find their lost puppy. What should you do?",
+    question: "You&apos;re playing in the park and someone you don&apos;t know asks you to help find their lost puppy. What should you do?",
     options: [
       {
         text: "Help them look for the puppy",
         isCorrect: false,
-        feedback: "Remember, never go anywhere with strangers! Let's try again!"
+        feedback: "Remember, never go anywhere with strangers! Let&apos;s try again!"
       },
       {
         text: "Tell a trusted adult about it",
@@ -56,42 +56,42 @@ const scenarios: Scenario[] = [
       {
         text: "Ignore them and keep playing",
         isCorrect: false,
-        feedback: "It's good to be cautious, but we should tell an adult about suspicious situations."
+        feedback: "It&apos;s good to be cautious, but we should tell an adult about suspicious situations."
       }
     ]
   },
   {
     id: 3,
-    question: "You're at a friend's house and they want to play with matches. What should you do?",
+    question: "You&apos;re at a friend&apos;s house and they want to play with matches. What should you do?",
     options: [
       {
         text: "Join them in playing with matches",
         isCorrect: false,
-        feedback: "Matches are dangerous! Never play with fire. Let's try again!"
+        feedback: "Matches are dangerous! Never play with fire. Let&apos;s try again!"
       },
       {
-        text: "Tell them it's dangerous and suggest a different game",
+        text: "Tell them it&apos;s dangerous and suggest a different game",
         isCorrect: true,
         feedback: "Great thinking! Always choose safe activities and help others make safe choices too."
       },
       {
         text: "Watch them play with matches",
         isCorrect: false,
-        feedback: "Even watching can be dangerous. Always stay away from fire. Let's try again!"
+        feedback: "Even watching can be dangerous. Always stay away from fire. Let&apos;s try again!"
       }
     ]
   },
   {
     id: 4,
-    question: "You're at the pool and your friends want to play a game of pushing each other in. What should you do?",
+    question: "You&apos;re at the pool and your friends want to play a game of pushing each other in. What should you do?",
     options: [
       {
         text: "Join in the pushing game",
         isCorrect: false,
-        feedback: "Pushing games near water can be very dangerous! Let's try again!"
+        feedback: "Pushing games near water can be very dangerous! Let&apos;s try again!"
       },
       {
-        text: "Tell them it's not safe and suggest a different game",
+        text: "Tell them it&apos;s not safe and suggest a different game",
         isCorrect: true,
         feedback: "Excellent! Always choose safe water activities and help others stay safe too."
       },
@@ -104,12 +104,12 @@ const scenarios: Scenario[] = [
   },
   {
     id: 5,
-    question: "You're crossing the street and the light turns yellow. What should you do?",
+    question: "You&apos;re crossing the street and the light turns yellow. What should you do?",
     options: [
       {
         text: "Run across quickly",
         isCorrect: false,
-        feedback: "Running across the street is dangerous! Let's try again!"
+        feedback: "Running across the street is dangerous! Let&apos;s try again!"
       },
       {
         text: "Stop and wait for the next green light",
@@ -125,33 +125,33 @@ const scenarios: Scenario[] = [
   },
   {
     id: 6,
-    question: "You're at home alone and someone rings the doorbell. What should you do?",
+    question: "You&apos;re at home alone and someone rings the doorbell. What should you do?",
     options: [
       {
         text: "Open the door to see who it is",
         isCorrect: false,
-        feedback: "Never open the door when you're home alone! Let's try again!"
+        feedback: "Never open the door when you&apos;re home alone! Let&apos;s try again!"
       },
       {
-        text: "Look through the peephole and don't open if you don't know them",
+        text: "Look through the peephole and don&apos;t open if you don&apos;t know them",
         isCorrect: true,
-        feedback: "Great job! Always check who's at the door and never open it to strangers."
+        feedback: "Great job! Always check who&apos;s at the door and never open it to strangers."
       },
       {
         text: "Yell through the door to ask who it is",
         isCorrect: false,
-        feedback: "It's better to stay quiet and not let strangers know you're home alone."
+        feedback: "It&apos;s better to stay quiet and not let strangers know you&apos;re home alone."
       }
     ]
   },
   {
     id: 7,
-    question: "You're playing with your friends and one of them falls and gets hurt. What should you do?",
+    question: "You&apos;re playing with your friends and one of them falls and gets hurt. What should you do?",
     options: [
       {
         text: "Keep playing and ignore them",
         isCorrect: false,
-        feedback: "We should always help others when they're hurt. Let's try again!"
+        feedback: "We should always help others when they&apos;re hurt. Let&apos;s try again!"
       },
       {
         text: "Tell an adult immediately",
@@ -161,21 +161,21 @@ const scenarios: Scenario[] = [
       {
         text: "Try to fix it yourself",
         isCorrect: false,
-        feedback: "It's important to get help from an adult for injuries. Let's try again!"
+        feedback: "It&apos;s important to get help from an adult for injuries. Let&apos;s try again!"
       }
     ]
   },
   {
     id: 8,
-    question: "You're at a friend's house and they want to play with their parent's medicine. What should you do?",
+    question: "You&apos;re at a friend&apos;s house and they want to play with their parent&apos;s medicine. What should you do?",
     options: [
       {
         text: "Join them in playing with the medicine",
         isCorrect: false,
-        feedback: "Medicine is not a toy! It can be very dangerous. Let's try again!"
+        feedback: "Medicine is not a toy! It can be very dangerous. Let&apos;s try again!"
       },
       {
-        text: "Tell them it's dangerous and suggest a different game",
+        text: "Tell them it&apos;s dangerous and suggest a different game",
         isCorrect: true,
         feedback: "Perfect! Always stay away from medicine and help others make safe choices."
       },
@@ -188,15 +188,15 @@ const scenarios: Scenario[] = [
   },
   {
     id: 9,
-    question: "You're walking to school and see a dog you don't know. What should you do?",
+    question: "You&apos;re walking to school and see a dog you don&apos;t know. What should you do?",
     options: [
       {
         text: "Run up to pet the dog",
         isCorrect: false,
-        feedback: "Never approach an unknown dog! Let's try again!"
+        feedback: "Never approach an unknown dog! Let&apos;s try again!"
       },
       {
-        text: "Stay calm, don't make eye contact, and walk away slowly",
+        text: "Stay calm, don&apos;t make eye contact, and walk away slowly",
         isCorrect: true,
         feedback: "Great thinking! Always be cautious around unknown animals."
       },
@@ -209,12 +209,12 @@ const scenarios: Scenario[] = [
   },
   {
     id: 10,
-    question: "You're playing outside and see a storm coming. What should you do?",
+    question: "You&apos;re playing outside and see a storm coming. What should you do?",
     options: [
       {
         text: "Keep playing until it starts raining",
         isCorrect: false,
-        feedback: "It's important to go inside before the storm gets close! Let's try again!"
+        feedback: "It&apos;s important to go inside before the storm gets close! Let&apos;s try again!"
       },
       {
         text: "Go inside immediately and tell an adult",
