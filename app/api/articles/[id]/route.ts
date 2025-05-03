@@ -1,12 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+// CORS headers configuration
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
-) {
+): Promise<NextResponse> {
+  // Handle preflight requests
+  if (request.method === 'OPTIONS') {
+    return new NextResponse(null, { headers: corsHeaders });
+  }
+
   try {
     const { id } = params;
     
+    // Input validation
+    if (!id || typeof id !== 'string') {
+      return NextResponse.json(
+        { error: 'Invalid article ID' },
+        { status: 400, headers: corsHeaders }
+      );
+    }
+
     // In a real application, you would fetch this from a database
     // For now, we'll return a mock article
     const article = {
@@ -36,11 +56,15 @@ Remember, your safety is paramount. These tips are just a starting point - alway
       source: 'AI Generated'
     };
 
-    return NextResponse.json(article);
+    return NextResponse.json(article, { headers: corsHeaders });
   } catch (error) {
+    console.error('Error fetching article:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch article', message: error instanceof Error ? error.message : 'Unknown error' },
-      { status: 500 }
+      { 
+        error: 'Failed to fetch article', 
+        message: error instanceof Error ? error.message : 'Unknown error' 
+      },
+      { status: 500, headers: corsHeaders }
     );
   }
 } 
