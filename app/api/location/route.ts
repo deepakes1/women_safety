@@ -2,11 +2,18 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 
+interface User {
+  id: string;
+  name?: string | null;
+  email?: string | null;
+  image?: string | null;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession(authOptions);
     
-    if (!session) {
+    if (!session || !session.user || !(session.user as User).id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
@@ -17,7 +24,7 @@ export async function POST(request: NextRequest) {
       latitude,
       longitude,
       timestamp,
-      userId: session.user.id
+      userId: (session.user as User).id
     });
 
     return NextResponse.json({ 
