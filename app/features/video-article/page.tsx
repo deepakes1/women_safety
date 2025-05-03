@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Search, Filter } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 interface Article {
   id: string;
@@ -22,6 +22,7 @@ export default function VideoArticlePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const generateArticles = async (apiKey: string) => {
     try {
@@ -93,6 +94,10 @@ export default function VideoArticlePage() {
     }
     generateArticles(apiKey);
   }, []);
+
+  const handleArticleClick = (articleId: string) => {
+    router.push(`/features/video-article?articleId=${articleId}`);
+  };
 
   const filteredArticles = articles.filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -173,7 +178,7 @@ export default function VideoArticlePage() {
                   <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-100">
                     <span className="text-sm text-gray-500">{article.date}</span>
                     <button
-                      onClick={() => router.push(`/features/video-article/${article.id}`)}
+                      onClick={() => handleArticleClick(article.id)}
                       className="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
                     >
                       Read More

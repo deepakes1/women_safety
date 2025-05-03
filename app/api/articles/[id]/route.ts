@@ -7,22 +7,20 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function GET(request: NextRequest) {
   // Handle preflight requests
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, { headers: corsHeaders });
   }
 
   try {
-    const { id } = params;
+    const { searchParams } = new URL(request.url);
+    const id = searchParams.get('id');
     
     // Input validation
-    if (!id || typeof id !== 'string') {
+    if (!id) {
       return NextResponse.json(
-        { error: 'Invalid article ID' },
+        { error: 'Article ID is required' },
         { status: 400, headers: corsHeaders }
       );
     }
