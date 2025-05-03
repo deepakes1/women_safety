@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FaMapMarkerAlt, FaTimes, FaHistory, FaExclamationTriangle, FaMobileAlt, FaLocationArrow } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaTimes, FaHistory, FaMobileAlt, FaLocationArrow } from 'react-icons/fa';
 
 interface Location {
   latitude: number;

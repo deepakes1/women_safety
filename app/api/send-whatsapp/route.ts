@@ -24,6 +24,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (!twilioPhoneNumber) {
+      return NextResponse.json(
+        { error: 'Twilio phone number not configured' },
+        { status: 500 }
+      );
+    }
+
     // Format phone numbers properly
     const formattedFromNumber = twilioPhoneNumber.startsWith('whatsapp:') 
       ? twilioPhoneNumber 
@@ -54,11 +61,11 @@ export async function POST(request: NextRequest) {
       from: formattedFromNumber,
       to: formattedToNumber
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error sending WhatsApp message:', error);
     
     // Handle specific Twilio errors
-    if (error.code === 63007) {
+    if (error instanceof Error && 'code' in error && error.code === 63007) {
       return NextResponse.json(
         { 
           error: 'WhatsApp number not properly configured. Please check your Twilio settings.',

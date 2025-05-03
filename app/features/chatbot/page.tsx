@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { FiSend, FiAlertTriangle, FiShield, FiMessageSquare, FiUser } from 'react-icons/fi';
+import { FiSend, FiAlertTriangle, FiShield, FiUser } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Message {
