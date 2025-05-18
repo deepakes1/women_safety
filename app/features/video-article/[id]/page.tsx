@@ -38,7 +38,9 @@ export default function ArticleDetailPage() {
       }
     };
 
-    fetchArticle();
+    if (id) {
+      fetchArticle();
+    }
   }, [id]);
 
   if (loading) {

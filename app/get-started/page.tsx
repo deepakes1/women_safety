@@ -41,13 +41,13 @@ export default function GetStarted() {
       link: '/features/location-sharing'
     },
     
-    {
-      title: 'Video & Article Recommendations',
-      description: 'Personalized content on safety, mental health, and financial security.',
-      icon: <FaVideo className="text-4xl text-white" />,
-      color: 'from-pink-500 to-pink-600',
-      link: '/features/video-article'
-    },
+    // {
+    //   title: 'Video & Article Recommendations',
+    //   description: 'Personalized content on safety, mental health, and financial security.',
+    //   icon: <FaVideo className="text-4xl text-white" />,
+    //   color: 'from-pink-500 to-pink-600',
+    //   link: '/features/video-article'
+    // },
     {
       title: 'Financial Safety Education',
       description: 'Teaches users about scams, frauds, and secure money management.',
@@ -60,35 +60,35 @@ export default function GetStarted() {
       description: 'A virtual assistant that speaks and interacts for instant help.',
       icon: <FaAI className="text-4xl text-white" />,
       color: 'from-cyan-500 to-cyan-600',
-      link: '/features/chatbot'
+      link: 'https://woemn-safety-chatbot.vercel.app/'
     },
     {
-      title: 'Live Workshops',
+      title: 'Workshops',
       description: 'Real-time expert sessions on mental health and safety awareness.',
       icon: <FaUsers className="text-4xl text-white" />,
       color: 'from-indigo-500 to-indigo-600',
       link: '/features/Workshop'
     },
-    {
-      title: 'Counseling Chat Rooms',
-      description: 'Anonymous spaces for users to seek emotional support from professionals.',
-      icon: <FaComments className="text-4xl text-white" />,
-      color: 'from-teal-500 to-teal-600'
-    },
-    {
-      title: 'Mental Health Tracking',
-      description: 'Users can log emotions and get personalized self-care suggestions.',
-      icon: <FaHeart className="text-4xl text-white" />,
-      color: 'from-rose-500 to-rose-600',
-      link: '/features/mental-health'
-    },
-    {
-      title: 'Audio Messaging',
-      description: 'Record and send voice messages instead of typing.',
-      icon: <FaMicrophone className="text-4xl text-white" />,
-      color: 'from-orange-500 to-orange-600',
-      link: '/features/audio-message'
-    },
+    // {
+    //   title: 'Counseling Chat Rooms',
+    //   description: 'Anonymous spaces for users to seek emotional support from professionals.',
+    //   icon: <FaComments className="text-4xl text-white" />,
+    //   color: 'from-teal-500 to-teal-600'
+    // },
+    // {
+    //   title: 'Mental Health Tracking',
+    //   description: 'Users can log emotions and get personalized self-care suggestions.',
+    //   icon: <FaHeart className="text-4xl text-white" />,
+    //   color: 'from-rose-500 to-rose-600',
+    //   link: '/features/mental-health'
+    // },
+    // {
+    //   title: 'Audio Messaging',
+    //   description: 'Record and send voice messages instead of typing.',
+    //   icon: <FaMicrophone className="text-4xl text-white" />,
+    //   color: 'from-orange-500 to-orange-600',
+    //   link: '/features/audio-message'
+    // },
     {
       title: 'Safety Games',
       description: 'Interactive learning about safety through fun activities.',

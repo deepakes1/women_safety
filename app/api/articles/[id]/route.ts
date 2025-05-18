@@ -1,4 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
+import OpenAI from 'openai';
+
+// Initialize OpenAI client
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
 // CORS headers configuration
 const corsHeaders = {
@@ -7,15 +13,14 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
 
-export async function GET(request: NextRequest) {
+export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   // Handle preflight requests
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, { headers: corsHeaders });
   }
 
   try {
-    const { searchParams } = new URL(request.url);
-    const id = searchParams.get('id');
+    const id = params.id;
     
     // Input validation
     if (!id) {
@@ -25,29 +30,28 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // In a real application, you would fetch this from a database
-    // For now, we'll return a mock article
+    // Generate article using GPT-4
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content: "You are a helpful assistant that generates informative articles about women's safety and empowerment. Generate detailed, practical content with real-world examples."
+        },
+        {
+          role: "user",
+          content: "Generate a comprehensive article about women's safety tips and strategies. Include practical advice, real-world scenarios, and actionable steps. Make it engaging and informative."
+        }
+      ],
+      max_tokens: 1500,
+    });
+
+    const generatedContent = completion.choices[0].message.content;
+
     const article = {
       id,
       title: "Women's Safety: Essential Tips and Strategies",
-      description: `In today's world, ensuring personal safety is crucial for everyone, especially women. Here are some essential tips and strategies to stay safe:
-
-1. Be Aware of Your Surroundings
-Always stay alert and aware of your environment. Avoid distractions like excessive phone use when walking alone.
-
-2. Trust Your Instincts
-If something feels wrong, it probably is. Don't hesitate to remove yourself from uncomfortable situations.
-
-3. Emergency Preparedness
-Keep emergency numbers handy and consider installing safety apps on your phone.
-
-4. Self-Defense Training
-Consider taking self-defense classes to build confidence and learn essential protection skills.
-
-5. Digital Safety
-Be cautious about sharing personal information online and maintain strong privacy settings.
-
-Remember, your safety is paramount. These tips are just a starting point - always prioritize your well-being and don't hesitate to seek help when needed.`,
+      description: generatedContent,
       type: 'blog',
       url: '#',
       date: new Date().toISOString().split('T')[0],
@@ -56,10 +60,10 @@ Remember, your safety is paramount. These tips are just a starting point - alway
 
     return NextResponse.json(article, { headers: corsHeaders });
   } catch (error) {
-    console.error('Error fetching article:', error);
+    console.error('Error generating article:', error);
     return NextResponse.json(
       { 
-        error: 'Failed to fetch article', 
+        error: 'Failed to generate article', 
         message: error instanceof Error ? error.message : 'Unknown error' 
       },
       { status: 500, headers: corsHeaders }

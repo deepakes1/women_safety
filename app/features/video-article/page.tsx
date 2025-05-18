@@ -95,7 +95,7 @@ export default function VideoArticlePage() {
   }, []);
 
   const handleArticleClick = (articleId: string) => {
-    router.push(`/features/video-article?articleId=${articleId}`);
+    router.push(`/features/video-article/${articleId}`);
   };
 
   const filteredArticles = articles.filter(article => {
